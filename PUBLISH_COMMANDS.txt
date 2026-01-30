@@ -1,0 +1,61 @@
+# Quick Command Reference for Publishing to npm
+
+## Step-by-Step Commands (Copy & Paste)
+
+# 1. Create npm account (if needed)
+npm adduser
+
+# 2. Login to npm
+npm login
+npm whoami
+
+# 3. Build project
+npm run build
+
+# 4. Test locally
+npm link
+spec --version
+spec --help
+npm unlink -g specchain-pro
+
+# 5. Dry run
+npm publish --dry-run
+
+# 6. Publish to npm
+npm publish
+
+# 7. Verify
+npm view specchain-pro
+
+# 8. Test installation
+npm install -g specchain-pro
+spec --version
+npm uninstall -g specchain-pro
+
+# 9. Push to GitHub
+git init
+git add .
+git commit -m "Release v0.1.0 to npm"
+git remote add origin https://github.com/yourusername/specchain-pro.git
+git push -u origin main
+git tag -a v0.1.0 -m "Release v0.1.0"
+git push origin v0.1.0
+
+# Done! Your package is live at:
+# https://www.npmjs.com/package/specchain-pro
+
+## Future Updates
+
+# Update version and publish
+npm version patch  # or minor, or major
+npm publish
+git push && git push --tags
+
+## Or use automated script
+
+# Windows
+.\scripts\deploy.ps1
+
+# Linux/Mac
+chmod +x scripts/deploy.sh
+./scripts/deploy.sh

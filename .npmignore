@@ -1,0 +1,45 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Tests
+**/*.test.ts
+**/*.spec.ts
+__tests__/
+coverage/
+
+# Development files
+.kiro/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Documentation (keep only essential in npm package)
+DEPLOYMENT_GUIDE.md
+GETTING_STARTED.md
+.kiro/specs/
+
+# Config files
+.eslintrc.js
+.prettierrc
+jest.config.js
+tsconfig.json
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Logs
+*.log
+npm-debug.log*
+*.tgz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.tsbuildinfo
