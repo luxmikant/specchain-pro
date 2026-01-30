@@ -25,7 +25,7 @@ program
   .command('new [idea]')
   .description('Generate a new specification from an idea summary')
   .option('-o, --output <path>', 'Output file path')
-  .action(async (idea, options) => {
+  .action(async (idea, _options) => {
     try {
       console.log(chalk.blue('🚀 Generating specification...'));
 
@@ -51,7 +51,7 @@ program
 program
   .command('sign <spec-id>')
   .description('Create a blockchain proof-of-authorship for a specification')
-  .action(async (specId) => {
+  .action(async (_specId) => {
     try {
       console.log(chalk.blue('🔐 Creating blockchain proof...'));
 
@@ -71,7 +71,7 @@ program
 program
   .command('verify <spec-id>')
   .description('Verify a specification against its blockchain proof')
-  .action(async (specId) => {
+  .action(async (_specId) => {
     try {
       console.log(chalk.blue('🔍 Verifying specification...'));
 
@@ -93,7 +93,7 @@ program
   .description('List all local specifications')
   .option('-t, --tags <tags>', 'Filter by tags (comma-separated)')
   .option('-a, --author <author>', 'Filter by author')
-  .action(async (options) => {
+  .action(async (_options) => {
     try {
       console.log(chalk.blue('📋 Listing specifications...'));
 
@@ -114,7 +114,7 @@ program
   .command('export <spec-id> <format>')
   .description('Export a specification to different formats (markdown, json, github)')
   .option('-o, --output <path>', 'Output file path')
-  .action(async (specId, format, options) => {
+  .action(async (specId, format, _options) => {
     try {
       console.log(chalk.blue(`📤 Exporting specification to ${format}...`));
 
